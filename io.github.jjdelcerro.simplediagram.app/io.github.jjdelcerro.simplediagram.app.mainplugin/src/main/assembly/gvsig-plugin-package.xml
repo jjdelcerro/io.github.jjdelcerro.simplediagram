@@ -1,0 +1,93 @@
+<!--
+Copyright (C) 2025 Joaquin del Cerro
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+ 
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+ 
+-->
+<assembly>
+  <id>gvsig-plugin-package</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <baseDirectory>${project.artifactId}</baseDirectory>
+  <includeBaseDirectory>true</includeBaseDirectory>
+  <files>
+    <file>
+      <source>target/${project.artifactId}-${project.version}.jar</source>
+      <outputDirectory>lib</outputDirectory>
+    </file>
+    <file>
+      <source>target/package.info</source>
+    </file>
+  </files>
+
+  <fileSets>
+    <fileSet>
+      <directory>src/main/resources-plugin</directory>
+      <outputDirectory>.</outputDirectory>
+    </fileSet>
+  </fileSets>
+
+
+  <dependencySets>
+    <dependencySet>
+      <useProjectArtifact>false</useProjectArtifact>
+      <useTransitiveDependencies>false</useTransitiveDependencies>
+      <outputDirectory>lib</outputDirectory>
+      <includes>
+        <include>io.github.jjdelcerro:io.github.jjdelcerro.simplediagram.lib.api</include>
+        <include>io.github.jjdelcerro:io.github.jjdelcerro.simplediagram.lib.impl</include>
+        <include>io.github.jjdelcerro:io.github.jjdelcerro.simplediagram.swing.api</include>
+        <include>io.github.jjdelcerro:io.github.jjdelcerro.simplediagram.swing.impl</include>
+                
+        <include>org.knowm.xchart:xchart</include>
+        <include>org.yaml:snakeyaml</include>
+        <include>net.sourceforge.plantuml:plantuml</include>
+
+
+        <!-- Dependencias de runtime transitivas de XChart -->
+        <include>de.erichseifert.vectorgraphics2d:VectorGraphics2D</include>
+        <include>de.rototor.pdfbox:graphics2d</include>
+        <include>org.apache.pdfbox:pdfbox</include>
+        <include>org.apache.pdfbox:pdfbox-io</include>
+        <include>org.apache.pdfbox:fontbox</include>
+        <include>commons-logging:commons-logging</include>
+        <include>com.madgag:animated-gif-lib</include>
+                
+                
+        <!-- Dependencias de runtime de PlantUML -->
+        <include>org.scilab.forge:jlatexmath</include>
+        <include>org.scilab.forge:jlatexmath-font-greek</include>
+        <include>org.scilab.forge:jlatexmath-font-cyrillic</include>
+        <include>org.eclipse.elk:org.eclipse.elk.core</include>
+        <include>org.eclipse.elk:org.eclipse.elk.graph</include>
+        <include>org.eclipse.elk:org.eclipse.elk.alg.layered</include>
+        <include>org.eclipse.elk:org.eclipse.elk.alg.common</include>
+        <include>org.eclipse.elk:org.eclipse.elk.alg.mrtree</include>
+        <include>org.eclipse.emf:org.eclipse.emf.common</include>
+        <include>org.eclipse.emf:org.eclipse.emf.ecore</include>
+        <include>org.eclipse.emf:org.eclipse.emf.ecore.xmi</include>
+        <include>com.google.guava:guava</include>
+        <include>com.google.guava:failureaccess</include>
+        <include>com.google.guava:listenablefuture</include>
+        <include>org.jspecify:jspecify</include>
+        <include>com.google.errorprone:error_prone_annotations</include>
+        <include>com.google.j2objc:j2objc-annotations</include>                                
+                
+      </includes>
+    </dependencySet>
+  </dependencySets>
+
+</assembly>
+

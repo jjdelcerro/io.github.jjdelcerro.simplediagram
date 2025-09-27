@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>io.github.jjdelcerro</groupId>
+    <artifactId>io.github.jjdelcerro.simplediagram.lib</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>io.github.jjdelcerro.simplediagram.lib.api</artifactId>
+  <name>${project.artifactId}</name>
+  <dependencies>
+    <dependency>
+      <groupId>org.gvsig</groupId>
+      <artifactId>org.gvsig.tools.lib</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.gvsig</groupId>
+      <artifactId>org.gvsig.tools.swing.api</artifactId>
+      <scope>compile</scope>
+    </dependency>
+<dependency>
+      <groupId>org.gvsig</groupId>
+      <artifactId>org.gvsig.fmap.dal.api</artifactId>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+
+</project>

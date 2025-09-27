@@ -1,0 +1,236 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>io.github.jjdelcerro</groupId>
+    <artifactId>io.github.jjdelcerro.simplediagram.app</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>io.github.jjdelcerro.simplediagram.app.mainplugin</artifactId>
+  <name>${project.artifactId}</name>
+  <dependencies>
+    <dependency>
+      <groupId>org.gvsig</groupId>
+      <artifactId>org.gvsig.app.mainplugin</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.gvsig</groupId>
+      <artifactId>org.gvsig.andami</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.github.jjdelcerro</groupId>
+      <artifactId>io.github.jjdelcerro.simplediagram.lib.api</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.github.jjdelcerro</groupId>
+      <artifactId>io.github.jjdelcerro.simplediagram.lib.impl</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.github.jjdelcerro</groupId>
+      <artifactId>io.github.jjdelcerro.simplediagram.swing.api</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.github.jjdelcerro</groupId>
+      <artifactId>io.github.jjdelcerro.simplediagram.swing.impl</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+        
+        
+    <dependency>
+      <groupId>org.knowm.xchart</groupId>
+      <artifactId>xchart</artifactId>
+      <version>3.8.8</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.yaml</groupId>
+      <artifactId>snakeyaml</artifactId>
+      <version>2.2</version>
+      <scope>runtime</scope>
+    </dependency>        
+    <dependency>
+        <groupId>net.sourceforge.plantuml</groupId>
+        <artifactId>plantuml</artifactId>
+        <version>1.2025.3</version> 
+        <scope>runtime</scope>
+    </dependency>    
+    
+    
+    <!-- Dependencias de runtime transitivas de XChart (XChart 3.8.8) -->
+    <dependency>
+        <groupId>de.erichseifert.vectorgraphics2d</groupId>
+        <artifactId>VectorGraphics2D</artifactId>
+        <version>0.13</version>
+        <scope>runtime</scope>
+    </dependency>
+    <dependency>
+        <groupId>de.rototor.pdfbox</groupId>
+        <artifactId>graphics2d</artifactId>
+        <version>3.0.1</version>
+        <scope>runtime</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.pdfbox</groupId>
+        <artifactId>pdfbox</artifactId>
+        <version>3.0.1</version>
+        <scope>runtime</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.pdfbox</groupId>
+        <artifactId>pdfbox-io</artifactId>
+        <version>3.0.1</version>
+        <scope>runtime</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.pdfbox</groupId>
+        <artifactId>fontbox</artifactId>
+        <version>3.0.1</version>
+        <scope>runtime</scope>
+    </dependency>
+    <dependency>
+        <groupId>commons-logging</groupId>
+        <artifactId>commons-logging</artifactId>
+        <version>1.1.1</version>
+        <scope>runtime</scope>
+    </dependency>
+    <dependency>
+        <groupId>com.madgag</groupId>
+        <artifactId>animated-gif-lib</artifactId>
+        <version>1.4</version>
+        <scope>runtime</scope>
+    </dependency>
+    
+                    
+    <!-- Dependencias de runtime transitivas de PlantUML (PlantUML 1.2025.3) -->
+    <!-- Estas son las que se arrastran con scope 'runtime' o 'compile' desde PlantUML -->
+
+    <!-- JLatexMath para renderizado de fórmulas LaTeX -->
+    <dependency>
+      <groupId>org.scilab.forge</groupId>
+      <artifactId>jlatexmath</artifactId>
+      <version>1.0.7</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.scilab.forge</groupId>
+      <artifactId>jlatexmath-font-greek</artifactId>
+      <version>1.0.7</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.scilab.forge</groupId>
+      <artifactId>jlatexmath-font-cyrillic</artifactId>
+      <version>1.0.7</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <!-- Eclipse Layout Kernel (ELK) - Motor de layout alternativo -->
+    <dependency>
+      <groupId>org.eclipse.elk</groupId>
+      <artifactId>org.eclipse.elk.core</artifactId>
+      <version>0.10.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.elk</groupId>
+      <artifactId>org.eclipse.elk.graph</artifactId>
+      <version>0.10.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.elk</groupId>
+      <artifactId>org.eclipse.elk.alg.layered</artifactId>
+      <version>0.10.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.elk</groupId>
+      <artifactId>org.eclipse.elk.alg.common</artifactId>
+      <version>0.10.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.elk</groupId>
+      <artifactId>org.eclipse.elk.alg.mrtree</artifactId>
+      <version>0.10.0</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <!-- Dependencias de Eclipse EMF (usadas por ELK) -->
+    <dependency>
+      <groupId>org.eclipse.emf</groupId>
+      <artifactId>org.eclipse.emf.common</artifactId>
+      <version>2.12.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.emf</groupId>
+      <artifactId>org.eclipse.emf.ecore</artifactId>
+      <version>2.12.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.emf</groupId>
+      <artifactId>org.eclipse.emf.ecore.xmi</artifactId>
+      <version>2.12.0</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <!-- Google Guava (usada por ELK) -->
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>33.4.8-jre</version>
+      <scope>runtime</scope>
+    </dependency>
+    <!-- Guava helpers (pueden ser necesarias con Guava 33.x) -->
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>failureaccess</artifactId>
+      <version>1.0.3</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>listenablefuture</artifactId>
+      <version>9999.0-empty-to-avoid-conflict-with-guava</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jspecify</groupId>
+      <artifactId>jspecify</artifactId>
+      <version>1.0.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.errorprone</groupId>
+      <artifactId>error_prone_annotations</artifactId>
+      <version>2.36.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.j2objc</groupId>
+      <artifactId>j2objc-annotations</artifactId>
+      <version>3.0.0</version>
+      <scope>runtime</scope>
+    </dependency>
+        
+  </dependencies>
+
+  <properties>
+    <gvsig.package.info.state>devel</gvsig.package.info.state>
+    <gvsig.package.info.official>false</gvsig.package.info.official>
+    <gvsig.package.info.dependencies>required: org.gvsig.app -ge 2.2.0</gvsig.package.info.dependencies>
+    <gvsig.package.info.categories />
+    <gvsig.package.info.name>diagram framework</gvsig.package.info.name>
+    <gvsig.package.info.description>Simple diagram framework</gvsig.package.info.description>
+    <gvsig.package.info.owner>Joaquin del Cerro</gvsig.package.info.owner>
+    <gvsig.package.info.javaVM>j1_8</gvsig.package.info.javaVM>
+    <gvsig.package.info.sourcesURL>${project.scm.url}</gvsig.package.info.sourcesURL>
+  </properties>
+
+</project>

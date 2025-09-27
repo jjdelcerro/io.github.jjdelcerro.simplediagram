@@ -1,0 +1,89 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.gvsig</groupId>
+        <artifactId>org.gvsig.desktop</artifactId>
+        <version>2.0.478</version>
+    </parent>
+    <groupId>io.github.jjdelcerro</groupId>
+    <artifactId>io.github.jjdelcerro.simplediagram</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+  
+  
+    <scm>
+        <connection>scm:svn:https://devel.gvsig.org/svn/gvsig-projects-pool/${project.artifactId}/trunk/${project.artifactId}</connection>
+        <developerConnection>scm:svn:https://devel.gvsig.org/svn/gvsig-projects-pool/${project.artifactId}/trunk/${project.artifactId}</developerConnection>
+        <url>https://devel.gvsig.org/svn/gvsig-projects-pool/${project.artifactId}/trunk/${project.artifactId}</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>jjdelcerro</id>
+            <name>Joaquin Jose del Cerro</name>
+            <email>jjdelcerro@gvsig.com</email>
+            <roles>
+                <role>Architect</role>
+                <role>Developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <repositories>
+        <repository>
+            <id>gvsig-public-http-repository</id>
+            <name>gvSIG maven public HTTP repository</name>
+            <url>http://devel.gvsig.org/m2repo/j2se</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.github.jjdelcerro</groupId>
+                <artifactId>io.github.jjdelcerro.simplediagram.app.mainplugin</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.jjdelcerro</groupId>
+                <artifactId>io.github.jjdelcerro.simplediagram.lib.api</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.jjdelcerro</groupId>
+                <artifactId>io.github.jjdelcerro.simplediagram.lib.impl</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.jjdelcerro</groupId>
+                <artifactId>io.github.jjdelcerro.simplediagram.swing.api</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.jjdelcerro</groupId>
+                <artifactId>io.github.jjdelcerro.simplediagram.swing.impl</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>io.github.jjdelcerro.simplediagram.lib</module>
+        <module>io.github.jjdelcerro.simplediagram.swing</module>
+        <module>io.github.jjdelcerro.simplediagram.app</module>
+    </modules>
+
+</project>
